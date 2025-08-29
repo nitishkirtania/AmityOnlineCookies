@@ -19,8 +19,8 @@ public class LeadSummaryTwo {
     public String commConsent;
     public String prospectID;
 
-    private static final String ACCESS_KEY = "u$raf1f94cefee49a084042db4bc3d0a173";
-    private static final String SECRET_KEY = "2f7384daff84fe5aebceffd927a53f1d14a5db64";
+    private static final String ACCESS_KEY = "u$raf1f94Demobc3d0a173";
+    private static final String SECRET_KEY = "2f7384daff84fe5aebcDemo5db64";
     private static boolean isUnirestInitialized = false;
 
     public static void initializeUnirest() {
