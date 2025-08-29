@@ -1,0 +1,2986 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='dd-MM-yyyy HH:mm'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>BBA_Program Automation Report</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Test Report for BBA_Program</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>13-08-2025 14:05</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='warning'><a href='#!'>Warning <i class='material-icons orange-text'>warning</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$50%'>
+                    <span class='strong'>7</span> tests passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='35%'>
+                    5</span> tests failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Enquire Now - Indian (Header Section)</span>
+						<span class='test-time'>13-08-2025 14:06</span>
+						<span class='test-status right warning'>Warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:06</span>
+	<span class='label end-time'>13-08-2025 14:09</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 06.813</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:07:27 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA tWxnx
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:07:27 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_ozPzEH@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:07:27 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2391654736
+				</td>
+			</tr>
+			<tr class='log' status='warning'>			
+				<td class='status warning' title='Warning' alt='Warning'><i class='material-icons'> warning </i></td>
+				<td class='timestamp'>2:08:14 pm</td>
+				<td class='step-details'>
+						Degree/Program selection step skipped: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='basis-1/2']//select[@class='appearance-none lining-nums w-full text-stone-500 bg-white text-lg leading-loose tracking-tight outline-none pr-10 false Input_selectDropdown__rRnfH']' (tried for 30 second(s) with 500 milliseconds interval)
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:08:14 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:08:14 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: 599d6b8f-0d21-4c4b-b7c0-c0211397605b
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:08:14 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=E4EB7A79-51BC-4E90-B516-57B84A2C2F8D
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_ozPzEH@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA tWxnx
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2391654736
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Enquire
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : India
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:07:28 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:08:22 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : 599d6b8f-0d21-4c4b-b7c0-c0211397605b
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:08:54 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:09:03 pm</td>
+				<td class='step-details'>
+						Enquire Now Indian Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:09:03 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://asodlnew.amizone.net/admission_sports/home/DashBoard?u=E4EB7A79-51BC-4E90-B516-57B84A2C2F8D
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:09:03 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:09:03 pm</td>
+				<td class='step-details'>
+						Total Load Time: 96.11 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:09:03 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyEnquireNowHeader_India.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyEnquireNowHeader_India.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Enquire Now - International (Header Section)</span>
+						<span class='test-time'>13-08-2025 14:09</span>
+						<span class='test-status right warning'>Warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:09</span>
+	<span class='label end-time'>13-08-2025 14:11</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 10.038</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:09:47 pm</td>
+				<td class='step-details'>
+						country Code:   United Arab Emirates +971
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:09:48 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA nDBUs
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:09:48 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_QKcejM@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:09:48 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2346485909
+				</td>
+			</tr>
+			<tr class='log' status='warning'>			
+				<td class='status warning' title='Warning' alt='Warning'><i class='material-icons'> warning </i></td>
+				<td class='timestamp'>2:10:35 pm</td>
+				<td class='step-details'>
+						Degree/Program selection step skipped: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='basis-1/2']//select[@class='appearance-none lining-nums w-full text-stone-500 bg-white text-lg leading-loose tracking-tight outline-none pr-10 false Input_selectDropdown__rRnfH']' (tried for 30 second(s) with 500 milliseconds interval)
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:10:35 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:10:35 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: ab484fb2-f7c5-46a1-bd37-9a10c8bc58c9
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:10:35 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=C9DC894B-8F4C-4F4D-9075-67B7F5DA4ADE
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_QKcejM@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA nDBUs
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2346485909
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Enquire
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : United Arab Emirates
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:09:48 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:10:37 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : ab484fb2-f7c5-46a1-bd37-9a10c8bc58c9
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:11:21 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:11:25 pm</td>
+				<td class='step-details'>
+						Enquire Now International Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:11:25 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey pagehttps://asodlnew.amizone.net/admission_sports/home/DashBoard?u=C9DC894B-8F4C-4F4D-9075-67B7F5DA4ADE
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:11:25 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:11:25 pm</td>
+				<td class='step-details'>
+						Total Load Time: 99.48 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:11:25 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyEnquireNowHeader_International.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyEnquireNowHeader_International.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Apply Now - India (Header Section)</span>
+						<span class='test-time'>13-08-2025 14:11</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:11</span>
+	<span class='label end-time'>13-08-2025 14:13</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 01 58.501</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:12:05 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA IYVnu
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:12:05 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_1cXJDo@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:12:05 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2390290098
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:12:53 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:12:53 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: 6edccdfb-ad88-45fc-8692-be28b601a5cc
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:12:53 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=75825EE4-9526-488D-81C5-45145B7FD717
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_1cXJDo@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA IYVnu
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2390290098
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : India
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:12:05 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:02 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : 6edccdfb-ad88-45fc-8692-be28b601a5cc
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:13:32 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:32 pm</td>
+				<td class='step-details'>
+						Apply Now Header Indian Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:32 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://asodlnew.amizone.net/admission_sports/home/DashBoard?u=75825EE4-9526-488D-81C5-45145B7FD717
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:13:32 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:13:32 pm</td>
+				<td class='step-details'>
+						Total Load Time: 87.92 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:13:33 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyApplyNowHeader_India.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyApplyNowHeader_India.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Apply Now - International (Header Section)</span>
+						<span class='test-time'>13-08-2025 14:13</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:13</span>
+	<span class='label end-time'>13-08-2025 14:16</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 58.726</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:14:18 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA rPIXz
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:14:18 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_CFqAS6@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:14:18 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2334489616
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:14:19 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:14:44 pm</td>
+				<td class='step-details'>
+						❌ LSQ_ID2 cookie not found after retries.
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:15:09 pm</td>
+				<td class='step-details'>
+						❌ ApplicationUrl cookie not found after retries.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_CFqAS6@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA rPIXz
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2334489616
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : United Arab Emirates
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:15:09 pm
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:16:05 pm</td>
+				<td class='step-details'>
+						❌ Prospect-ID LS : expected 'null', actual '70894db1-c20b-4a24-8443-cc54ec50abce'
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:16:42 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:16:42 pm</td>
+				<td class='step-details'>
+						Apply Now Header International Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:16:42 pm</td>
+				<td class='step-details'>
+						International Flow Failed: Cannot invoke "String.replaceFirst(String, String)" because "ApplicationUrl" is null
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:16:42 pm</td>
+				<td class='step-details'>
+						Total Load Time : 147.67 seconds
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:16:43 pm</td>
+				<td class='step-details'>
+						❌ Test Failed: java.lang.AssertionError: The following asserts failed:
+	❌ Prospect-ID LS : expected 'null', actual '70894db1-c20b-4a24-8443-cc54ec50abce',
+	International Flow Failed - Cannot invoke "String.replaceFirst(String, String)" because "ApplicationUrl" is null
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyApplyNowHeader_International.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyApplyNowHeader_International.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Take Instant Scholarship Test</span>
+						<span class='test-time'>13-08-2025 14:16</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:16</span>
+	<span class='label end-time'>13-08-2025 14:19</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 55.014</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:18:36 pm</td>
+				<td class='step-details'>
+						Clicked on July'25 Session - Take Instant Scholarship Test
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:18:39 pm</td>
+				<td class='step-details'>
+						Yellow Strip is Working
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:18:39 pm</td>
+				<td class='step-details'>
+						Name: TestQA XeDXu
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:18:39 pm</td>
+				<td class='step-details'>
+						Email: TestQA_urAqVE@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:18:39 pm</td>
+				<td class='step-details'>
+						Mobile: 2399906097
+				</td>
+			</tr>
+			<tr class='log' status='warning'>			
+				<td class='status warning' title='Warning' alt='Warning'><i class='material-icons'> warning </i></td>
+				<td class='timestamp'>2:19:12 pm</td>
+				<td class='step-details'>
+						Degree/Program selection skipped: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='basis-1/2']//select[@class='appearance-none lining-nums w-full text-stone-500 bg-white text-lg leading-loose tracking-tight outline-none pr-10 false Input_selectDropdown__rRnfH']' (tried for 20 second(s) with 500 milliseconds interval)
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:19:12 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:19:12 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: e9b3ac35-772d-493d-9549-804ce7e5cfa3
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:19:12 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: https://scholarship-exam.amityonline.com/rest_api/auth.php?Key=dGVzdHFhX3VyYXF2ZUBnbWFpbC5jb20=
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_urAqVE@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA XeDXu
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2399906097
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Enquire
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						❌ UTM Medium mismatch LS: expected 'scholarship_lead', actual 'request_a_callback'
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : India
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:18:40 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:19:20 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : e9b3ac35-772d-493d-9549-804ce7e5cfa3
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:19:42 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Test.
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:19:45 pm</td>
+				<td class='step-details'>
+						❌ URL mismatch. Expected: https://scholarship-exam.amityonline.com/rest_api/auth.php?Key=dGVzdHFhX3VyYXF2ZUBnbWFpbC5jb20=Actual: https://scholarship-exam.amityonline.com/my/
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:19:45 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:19:45 pm</td>
+				<td class='step-details'>
+						Total Load Time: 69.24 seconds
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:19:45 pm</td>
+				<td class='step-details'>
+						❌ Test Failed: java.lang.AssertionError: The following asserts failed:
+	❌ UTM Medium mismatch LS: expected 'scholarship_lead', actual 'request_a_callback'
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyInstantScholarshipTest.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyInstantScholarshipTest.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Open form BBA India</span>
+						<span class='test-time'>13-08-2025 14:19</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:19</span>
+	<span class='label end-time'>13-08-2025 14:22</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 07.074</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:20:25 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA scVXb
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:20:25 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2311504296
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:20:25 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_auRW9K@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:20:32 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:20:32 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: c4d04a3c-8978-4242-ba6b-43ae99d24f7c
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:20:32 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=3448E9D5-B7E5-4948-ACC0-D0129BFC7E24
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_auRW9K@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA scVXb
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2311504296
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : India
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:20:26 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:20:40 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : c4d04a3c-8978-4242-ba6b-43ae99d24f7c
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:01 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:22:01 pm</td>
+				<td class='step-details'>
+						Request Call Indian Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:22:01 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://asodlnew.amizone.net/admission_sports/home/DashBoard?u=3448E9D5-B7E5-4948-ACC0-D0129BFC7E24
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:01 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:01 pm</td>
+				<td class='step-details'>
+						Total Load Time: 96.29 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:22:02 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/Open_form_BBA_India.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/Open_form_BBA_India.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Open form BBA International</span>
+						<span class='test-time'>13-08-2025 14:22</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:22</span>
+	<span class='label end-time'>13-08-2025 14:23</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 01 35.706</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:44 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA XZNbh
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:44 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2324586851
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:44 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_N3bj3M@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:45 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:49 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: 034904c6-2bee-462b-b7bb-cfc2c07b0bf0
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:22:49 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=DB0121A4-9158-4E21-BEA7-831999B18CBD
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_N3bj3M@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA XZNbh
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2324586851
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : United Arab Emirates
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:22:45 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:27 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : 034904c6-2bee-462b-b7bb-cfc2c07b0bf0
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:23:49 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:49 pm</td>
+				<td class='step-details'>
+						Request Call International Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:49 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://asodlnew.amizone.net/admission_sports/home/DashBoard?u=DB0121A4-9158-4E21-BEA7-831999B18CBD
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:23:49 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:23:49 pm</td>
+				<td class='step-details'>
+						Total Load Time: 65.01 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:23:50 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/Open_form_BBA_International.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/Open_form_BBA_International.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Download Brochure India</span>
+						<span class='test-time'>13-08-2025 14:23</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:23</span>
+	<span class='label end-time'>13-08-2025 14:25</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 01 22.558</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:24:29 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA IJXFZ
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:24:29 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2331005564
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:24:29 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_hI5WpE@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:24:30 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:24:33 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: 30d9b25d-8793-45dd-a79f-696315994f52
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:24:33 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: https://application.amityonline.com/admission/home/DashBoard?u=8C7A5C3D-DBAB-479E-92B1-FBEBDB4EE3C6
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_hI5WpE@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA IJXFZ
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2331005564
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Enquire
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: download_brochure
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : India
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:24:30 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:24:45 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : 30d9b25d-8793-45dd-a79f-696315994f52
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:25:18 pm</td>
+				<td class='step-details'>
+						ℹ️ No “Thank You” message found — proceeding to validate Start Application button...
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:25:21 pm</td>
+				<td class='step-details'>
+						✅ Indian Flow:  Download Brochure and verified successfully
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:25:21 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://application.amityonline.com/admission/home/DashBoard?u=8C7A5C3D-DBAB-479E-92B1-FBEBDB4EE3C6
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:25:21 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:25:21 pm</td>
+				<td class='step-details'>
+						Total Load Time: 51.96 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:25:21 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/Download_Brochure_India.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/Download_Brochure_India.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Download Brochure International</span>
+						<span class='test-time'>13-08-2025 14:25</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:25</span>
+	<span class='label end-time'>13-08-2025 14:27</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 01 50.475</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:26:03 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA OgelX
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:26:03 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2335414299
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:26:03 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_85bdSN@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:26:07 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:26:10 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: 2a345f63-4d3f-44eb-aec8-9f8239ffb8f4
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:26:10 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: https://application.amityonline.com/admission/home/DashBoard?u=520696EE-10C3-47CB-B66C-EFFD638B1A35
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_85bdSN@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA OgelX
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2335414299
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Enquire
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: download_brochure
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : United Arab Emirates
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:26:07 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:26:45 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : 2a345f63-4d3f-44eb-aec8-9f8239ffb8f4
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:27:20 pm</td>
+				<td class='step-details'>
+						ℹ️ No “Thank You” message found — proceeding to validate Start Application button...
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:27:23 pm</td>
+				<td class='step-details'>
+						✅ Indian Flow:  Download Brochure and verified successfully
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:27:23 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://application.amityonline.com/admission/home/DashBoard?u=520696EE-10C3-47CB-B66C-EFFD638B1A35
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:27:23 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:27:23 pm</td>
+				<td class='step-details'>
+						Total Load Time: 79.91 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:27:23 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/Download_Brochure_International.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/Download_Brochure_International.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Page sticky button India (Call Icon)</span>
+						<span class='test-time'>13-08-2025 14:27</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:27</span>
+	<span class='label end-time'>13-08-2025 14:29</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 01 32.791</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:28:10 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA XpYCS
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:28:10 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_aLBmuh@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:28:10 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2349695800
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:28:21 pm</td>
+				<td class='step-details'>
+						Degree and Program selection completed successfully.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:28:21 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:28:21 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: 4c2b5985-01cd-4cc2-b3ec-d2a66dc23f0c
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:28:21 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=98B683F4-92E4-4F58-BA84-F3B54C823EA0
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_aLBmuh@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA XpYCS
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2349695800
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : India
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:28:11 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:28:41 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : 4c2b5985-01cd-4cc2-b3ec-d2a66dc23f0c
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:29:03 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:29:03 pm</td>
+				<td class='step-details'>
+						Call Icon Indian Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:29:09 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://asodlnew.amizone.net/admission_sports/home/DashBoard?u=98B683F4-92E4-4F58-BA84-F3B54C823EA0
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:29:09 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:29:09 pm</td>
+				<td class='step-details'>
+						⏱️ Page Load Time: 62.08 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:29:09 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/sticky_buttons_Call_icon_India.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/sticky_buttons_Call_icon_India.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Page sticky button International (Call Icon)</span>
+						<span class='test-time'>13-08-2025 14:29</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:29</span>
+	<span class='label end-time'>13-08-2025 14:31</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 29.434</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:29:52 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA hLRqM
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:29:52 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_w0OxZn@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:29:52 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2358503356
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:29:56 pm</td>
+				<td class='step-details'>
+						Degree and Program selection completed successfully.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:30:01 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:30:01 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: 
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:30:01 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: 
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_w0OxZn@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA hLRqM
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2358503356
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : United Arab Emirates
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:29:54 pm
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:30:49 pm</td>
+				<td class='step-details'>
+						❌ Prospect-ID LS : expected '', actual '2ef3801d-81db-4f89-a898-8487fe0e720c'
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:31:12 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:31:41 pm</td>
+				<td class='step-details'>
+						 International Flow Failed: Start Application button did not appear. Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='startApplicationgta']' (tried for 20 second(s) with 500 milliseconds interval)
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:31:47 pm</td>
+				<td class='step-details'>
+						❌ URL mismatch. Expected : Actual: https://qa-fe.amityonline.com/undefined
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:31:47 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:31:47 pm</td>
+				<td class='step-details'>
+						⏱️ Total Load Time : 118.65 seconds
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:31:47 pm</td>
+				<td class='step-details'>
+						Page displayed error text: 404 - Page Not Found
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:31:47 pm</td>
+				<td class='step-details'>
+						❌ Test Failed: java.lang.AssertionError: The following asserts failed:
+	❌ Prospect-ID LS : expected '', actual '2ef3801d-81db-4f89-a898-8487fe0e720c',
+	 International Flow Failed - Start Application button not found,
+	Visual error message found on screen: 404 - Page Not Found
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/sticky_buttons_Call_icon_International.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/sticky_buttons_Call_icon_International.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Page sticky button (Apply Now - India)</span>
+						<span class='test-time'>13-08-2025 14:32</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:32</span>
+	<span class='label end-time'>13-08-2025 14:34</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 03.680</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:32:41 pm</td>
+				<td class='step-details'>
+						Apply now sticky button successfully clicked
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:32:44 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA cHCig
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:32:44 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_xu4AMi@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:32:44 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2345783040
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:33:17 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:33:17 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: a4fda64d-7db0-4ca6-8d5d-9541c2699ef0
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:33:17 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=44375B62-11BF-4D3A-BCA5-B5954EECA4E9
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_xu4AMi@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA cHCig
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2345783040
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : India
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:32:45 pm
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:37 pm</td>
+				<td class='step-details'>
+						✅ Prospect-ID get from LS Cookies : a4fda64d-7db0-4ca6-8d5d-9541c2699ef0
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:33:59 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:33:59 pm</td>
+				<td class='step-details'>
+						Call Icon Indian Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:34:05 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://asodlnew.amizone.net/admission_sports/home/DashBoard?u=44375B62-11BF-4D3A-BCA5-B5954EECA4E9
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:34:05 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:34:05 pm</td>
+				<td class='step-details'>
+						⏱️ Page Load Time: 93.24 seconds
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:34:05 pm</td>
+				<td class='step-details'>
+						✅ Test Passed
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/apply_now_sticky.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/apply_now_sticky.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Page sticky button (Apply Now - INTERNATIONAL FLOW)</span>
+						<span class='test-time'>13-08-2025 14:34</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:34</span>
+	<span class='label end-time'>13-08-2025 14:36</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 02 25.584</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:34:53 pm</td>
+				<td class='step-details'>
+						Apply now sticky button successfully clicked
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:34:59 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA czNeY
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:34:59 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_KNbe85@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:34:59 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2351538827
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:35:02 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:35:29 pm</td>
+				<td class='step-details'>
+						❌ LSQ_ID2 cookie not found after retries.
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:35:54 pm</td>
+				<td class='step-details'>
+						❌ ApplicationUrl cookie not found after retries.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:35:56 pm</td>
+				<td class='step-details'>
+						Degree and Program selection completed successfully.
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:36:33 pm</td>
+				<td class='step-details'>
+						Apply Now 'United Arab Emirates' +971 International Journey is Failedno such element: Unable to locate element: {"method":"xpath","selector":"//form[@class='ConnectModalForm_root__zYe2H pr-[2rem]']//button[@type='submit'][normalize-space()='Submit']"}
+  (Session info: chrome=139.0.7258.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '17.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b606ff0f1faa9f390e1a5698774eeba7, findElement {using=xpath, value=//form[@class='ConnectModalForm_root__zYe2H pr-[2rem]']//button[@type='submit'][normalize-space()='Submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.68, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: /var/folders/g1/m4g67yjs5gx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51739}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51739/devtoo..., se:cdpVersion: 139.0.7258.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b606ff0f1faa9f390e1a5698774eeba7
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:36:40 pm</td>
+				<td class='step-details'>
+						Apply Now 'United Arab Emirates' +971 International Journey is FailedCannot invoke "String.replaceFirst(String, String)" because "ApplicationUrl" is null
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:36:40 pm</td>
+				<td class='step-details'>
+						⏱️ Total Load Time : 113.61 seconds
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:36:40 pm</td>
+				<td class='step-details'>
+						❌ Test Failed: java.lang.AssertionError: The following asserts failed:
+	Apply Now 'United Arab Emirates' +971 Journey is Failedno such element: Unable to locate element: {"method":"xpath","selector":"//form[@class='ConnectModalForm_root__zYe2H pr-[2rem]']//button[@type='submit'][normalize-space()='Submit']"}
+  (Session info: chrome=139.0.7258.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '17.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b606ff0f1faa9f390e1a5698774eeba7, findElement {using=xpath, value=//form[@class='ConnectModalForm_root__zYe2H pr-[2rem]']//button[@type='submit'][normalize-space()='Submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.68, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: /var/folders/g1/m4g67yjs5gx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51739}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51739/devtoo..., se:cdpVersion: 139.0.7258.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b606ff0f1faa9f390e1a5698774eeba7,
+	Apply Now 'United Arab Emirates' +971 Journey is FailedCannot invoke "String.replaceFirst(String, String)" because "ApplicationUrl" is null
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/apply_now_sticky_International.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/apply_now_sticky_International.png'></li>
+							</ul>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Blue RFI - Indian & International(HomePage)</span>
+						<span class='test-time'>13-08-2025 14:36</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>13-08-2025 14:36</span>
+	<span class='label end-time'>13-08-2025 14:40</span>
+	<span class='label time-taken grey lighten-1 white-text'>00 03 11.841</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:37:23 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA EusHe
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:37:23 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_Gg0Buq@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:37:23 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2397243739
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:37:23 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:37:28 pm</td>
+				<td class='step-details'>
+						❌ LSQ_ID2 cookie not found after retries.
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:37:28 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=464FE532-45FA-4E0C-8174-C377565EF726
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_Gg0Buq@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA EusHe
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2397243739
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ Country matched LS : India
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:37:23 pm
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:37:35 pm</td>
+				<td class='step-details'>
+						❌ Prospect-ID LS : expected 'null', actual 'cbac5abc-953e-483a-938a-271879681054'
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:12 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:38:12 pm</td>
+				<td class='step-details'>
+						Blue RFI Apply Now Indian Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:38:12 pm</td>
+				<td class='step-details'>
+						✅ URL matched Application Url of Cookies to application journey page : https://asodlnew.amizone.net/admission_sports/home/DashBoard?u=464FE532-45FA-4E0C-8174-C377565EF726
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:14 pm</td>
+				<td class='step-details'>
+						Total Load Time: 53.81 seconds
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:20 pm</td>
+				<td class='step-details'>
+						Random Name: TestQA LItnD
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:20 pm</td>
+				<td class='step-details'>
+						Random Email: TestQA_av7PcC@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:20 pm</td>
+				<td class='step-details'>
+						Random Mobile Number: 2392970117
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:21 pm</td>
+				<td class='step-details'>
+						country Code:   United States +1
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:21 pm</td>
+				<td class='step-details'>
+						✅ Clean Visited URL Cookie: https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:21 pm</td>
+				<td class='step-details'>
+						✅ LSQ_ID2 Cookie: cbac5abc-953e-483a-938a-271879681054
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:21 pm</td>
+				<td class='step-details'>
+						✅ Final Application URL Cookie: http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=464FE532-45FA-4E0C-8174-C377565EF726
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:38:58 pm</td>
+				<td class='step-details'>
+						No Thank You message found – continuing to check for Start Application button.
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						✅ Email matched LS : TestQA_av7PcC@gmail.com
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						✅ Name matched LS : TestQA LItnD
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						✅ Phone matched LS : 2392970117
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						✅ Page URL matched LS Cookies : https://qa-fe.amityonline.com/bachelor-of-business-administration-online
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						✅ Enquiry source matched LS: Apply Now
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						✅ UTM source matched LS: website
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						✅ UTM Medium matched LS: request_a_callback
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						❌ Country name not found LS (null or blank)
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						✅ CommConsent date matches LS today: 13/8/2025, 2:38:21 pm
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						❌ Prospect-ID LS : expected 'cbac5abc-953e-483a-938a-271879681054', actual '3bc053c5-ece4-448c-8eaf-b89aba05b854'
+				</td>
+			</tr>
+			<tr class='log' status='pass'>			
+				<td class='status pass' title='Pass' alt='Pass'><i class='material-icons'> check_circle </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						Blue RFI Apply Now International Journey Successful
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						❌ URL mismatch. Expected : http://asodlnew.amizone.net/admission_sports/home/DashBoard?u=464FE532-45FA-4E0C-8174-C377565EF726Actual: https://asodlnew.amizone.net/admission_sports/home/DashBoard?u=0EE4EF15-6BA9-410B-9F34-A8F5006964A8
+				</td>
+			</tr>
+			<tr class='log' status='info'>			
+				<td class='status info' title='Info' alt='Info'><i class='material-icons'> info_outline </i></td>
+				<td class='timestamp'>2:40:00 pm</td>
+				<td class='step-details'>
+						🧹 All cookies cleared after capture.
+				</td>
+			</tr>
+			<tr class='log' status='fail'>			
+				<td class='status fail' title='Fail' alt='Fail'><i class='material-icons'> cancel </i></td>
+				<td class='timestamp'>2:40:01 pm</td>
+				<td class='step-details'>
+						❌ Test Failed: java.lang.AssertionError: The following asserts failed:
+	❌ Prospect-ID LS : expected 'null', actual 'cbac5abc-953e-483a-938a-271879681054',
+	❌ Country name not found LS (null or blank),
+	❌ Prospect-ID LS : expected 'cbac5abc-953e-483a-938a-271879681054', actual '3bc053c5-ece4-448c-8eaf-b89aba05b854'
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+							<ul class='screenshots'>
+								<li><img width='80' height='40' onerror='this.style.display="none"' data-featherlight='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyBlueRFISection_India_International.png' src='/Users/glosys/Downloads/AllProgram_cookiesData/Reports/Screenshot/verifyBlueRFISection_India_International.png'></li>
+							</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>14</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>13-08-2025 14:05</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>13-08-2025 14:40</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 34 30.101</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 14,
+				passParent: 7,
+				failParent: 5,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 2,
+				skipParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Verify Enquire Now - Indian (Header Section)":126.813,"Verify Enquire Now - International (Header Section)":130.038,"Verify Apply Now - India (Header Section)":118.501,"Verify Apply Now - International (Header Section)":178.726,"Verify Take Instant Scholarship Test":175.014,"Open form BBA India":127.074,"Open form BBA International":95.706,"Download Brochure India":82.558,"Download Brochure International":110.475,"Page sticky button India (Call Icon)":92.791,"Page sticky button International (Call Icon)":149.434,"Page sticky button (Apply Now - India)":123.68,"Page sticky button (Apply Now - INTERNATIONAL FLOW)":145.584,"Verify Blue RFI - Indian & International(HomePage)":191.841
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>
